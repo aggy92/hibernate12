@@ -1,5 +1,7 @@
-package dao;
+package service;
 
+import dao.ClientAddressDAO;
+import dao.ClientDAO;
 import entity.Client;
 import entity.ClientAddress;
 

@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Client {
@@ -17,6 +18,10 @@ public class Client {
     @OneToOne
     @JoinColumn(name = "clientAddressId")
     private ClientAddress clientAddress;
+
+    @OneToMany
+    @JoinColumn(name = "clientId")
+    private List<Phone> phones;
 
     public Long getId() {
         return id;

@@ -1,8 +1,5 @@
-import dao.ClientService;
-import entity.Book;
-import entity.BookType;
-import entity.Client;
-import entity.ClientAddress;
+import entity.*;
+import service.ClientService;
 import service.BookService;
 
 import java.time.LocalDate;
@@ -52,6 +49,9 @@ public class Main {
         clientService.addClientWithAddress(client3);
 
         clientService.listClientsFromCity("Sopot");
+
+        Phone phone = new Phone();
+
 
     }
 

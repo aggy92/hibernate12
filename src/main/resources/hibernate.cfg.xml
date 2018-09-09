@@ -15,5 +15,8 @@
         <mapping class="entity.Book"/>
         <mapping class="entity.ClientAddress"/>
         <mapping class="entity.Client"/>
+        <mapping class="entity.Phone"/>
+        <mapping class="entity.Company"/>
+
     </session-factory>
 </hibernate-configuration>
