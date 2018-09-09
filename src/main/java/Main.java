@@ -1,11 +1,47 @@
+import dao.ClientService;
 import entity.Book;
 import entity.BookType;
+import entity.Client;
+import entity.ClientAddress;
 import service.BookService;
 
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+        //manageBooks();
+
+        ClientService clientService = new ClientService();
+
+        Client client = new Client();
+        client.setName("Jan");
+        client.setSurname("Kowalski");
+
+        Client client2 = new Client();
+        client2.setName("Marcin");
+        client2.setSurname("Nowak");
+
+        ClientAddress clientAddress = new ClientAddress();
+        clientAddress.setStreet("Grunwaldzka");
+        clientAddress.setHouseNo(55);
+        clientAddress.setCity("Gdańsk");
+        clientAddress.setCountry("Polska");
+
+        ClientAddress clientAddress2 = new ClientAddress();
+        clientAddress2.setStreet("3 maja");
+        clientAddress2.setHouseNo(3);
+        clientAddress2.setCity("Sopot");
+        clientAddress2.setCountry("Polska");
+
+        client.setClientAddress(clientAddress);
+        client2.setClientAddress(clientAddress2);
+
+        clientService.addClientWithAddress(client);
+        clientService.addClientWithAddress(client2);
+
+    }
+
+    private static void manageBooks() {
         BookService bookService = new BookService();
         Book book1 = new Book();
         book1.setTitle("Hobbit");
@@ -59,7 +95,7 @@ public class Main {
 
         //bookService.listAllBooks();
 
-       // bookService.findAndDeleteBooksAfter(2000);
+        // bookService.findAndDeleteBooksAfter(2000);
 
         bookService.listAllAuthorsWithManyBooks();
         bookService.listAllBooksByAuthor("Rowling");
