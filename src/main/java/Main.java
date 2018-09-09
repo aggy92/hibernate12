@@ -33,6 +33,14 @@ public class Main {
         book3.setTitle("Harry Potter i Kamień");
         bookService.editBook(book3);
 
+        Book bookToDelete = new Book();
+        bookToDelete.setId(2L);
+        bookService.deleteBook(bookToDelete);
+
+        bookService.listAllBooks();
+
+        bookService.findAndDeleteBooksAfter(2000);
+
 
     }
 }

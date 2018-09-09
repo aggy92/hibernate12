@@ -1,5 +1,7 @@
 package entity;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -60,5 +62,16 @@ public class Book {
 
     public void setPublished(LocalDate published) {
         this.published = published;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", published=" + published +
+                ", bookType=" + bookType +
+                '}';
     }
 }

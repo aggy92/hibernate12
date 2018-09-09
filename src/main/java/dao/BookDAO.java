@@ -6,11 +6,15 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import util.HibernateUtils;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookDAO {
     public void create(Book book) {
         SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
         Transaction transaction = null;
-        try(Session session = sessionFactory.openSession()) {
+        try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             session.persist(book);
             transaction.commit();
@@ -32,12 +36,65 @@ public class BookDAO {
             bookPersisted.setPublished(book.getPublished());
             bookPersisted.setBookType(book.getBookType());*/
             transaction.commit();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             session.close();
         }
 
 
+    }
+
+    public void remove(Book book) {
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transcaction = session.beginTransaction();
+
+        try {
+            session.remove(book);
+            transcaction.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+
+    public List<Book> findAll() {
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        List<Book> books = new ArrayList<>();
+        try {
+            String query = "select b from Book b";
+            books = session
+                    .createQuery(query, Book.class)
+                    .getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return books;
+    }
+
+    public List<Book> findAllPublishedAfter(int year) {
+        //LocalDate.of(year, 1, 1);
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        Session session = sessionFactory.openSession();
+
+        List<Book> books = new ArrayList<>();
+        try {
+             String query = "select b from Book b " +
+                     "where b.published > :published";
+             books = session.createQuery(query, Book.class)
+                     .setParameter("published", LocalDate.of(year, 1, 1))
+                     .getResultList();
+        } catch(Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return books;
     }
 }
