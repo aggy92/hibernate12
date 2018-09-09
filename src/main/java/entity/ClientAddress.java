@@ -20,6 +20,17 @@ public class ClientAddress {
     @Column
     private String country;
 
+    @OneToOne(mappedBy = "clientAddress")
+    private Client client;
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
     public Long getId() {
         return id;
     }
@@ -68,6 +79,7 @@ public class ClientAddress {
                 ", houseNo=" + houseNo +
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
+                ", clientSurname'" + client.getName() + '\'' +
                 '}';
     }
 }
