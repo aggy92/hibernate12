@@ -1,7 +1,6 @@
 import entity.Book;
 import entity.BookType;
 import service.BookService;
-import util.HibernateUtils;
 
 import java.time.LocalDate;
 
@@ -63,6 +62,7 @@ public class Main {
        // bookService.findAndDeleteBooksAfter(2000);
 
         bookService.listAllAuthorsWithManyBooks();
-
+        bookService.listAllBooksByAuthor("Rowling");
+        bookService.listAllBooksByTitle("Krzyżacy");
     }
 }

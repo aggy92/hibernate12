@@ -48,4 +48,14 @@ public class BookService {
             System.out.println(ob[0] + " -> " + ob[1]);
          });
      }
+
+     public void listAllBooksByAuthor(String author) {
+        List<Book> books = bookDAO.findByAuthor(author);
+        books.forEach(System.out::println);
+     }
+
+    public void listAllBooksByTitle(String title) {
+        List<Book> books = bookDAO.findByTitle(title);
+        books.forEach(System.out::println);
+    }
 }

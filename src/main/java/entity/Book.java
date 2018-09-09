@@ -6,6 +6,10 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Book.findByAuthor", query = "select b from Book b where b.author = :author"),
+        @NamedQuery(name = "Book.findByTitle", query = "select b from Book b where b.title = :title")
+})
 public class Book {
 
     @Id

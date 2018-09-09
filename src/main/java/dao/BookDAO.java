@@ -109,4 +109,26 @@ public class BookDAO {
         }
         return objects;
     }
+
+    public List<Book> findByAuthor(String author) {
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        List<Book> books = new ArrayList<>();
+        try (Session session = sessionFactory.openSession()) {
+            books = session.createNamedQuery("Book.findByAuthor")
+                    .setParameter("author", author)
+                    .getResultList();
+        }
+        return books;
+    }
+
+    public List<Book> findByTitle(String title) {
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        List<Book> books = new ArrayList<>();
+        try (Session session = sessionFactory.openSession()) {
+            books = session.createNamedQuery("Book.findByTitle")
+                    .setParameter("title", title)
+                    .getResultList();
+        }
+        return books;
+    }
 }
