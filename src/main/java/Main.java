@@ -21,6 +21,10 @@ public class Main {
         client2.setName("Marcin");
         client2.setSurname("Nowak");
 
+        Client client3 = new Client();
+        client3.setName("Michał");
+        client3.setSurname("Wiśniewski");
+
         ClientAddress clientAddress = new ClientAddress();
         clientAddress.setStreet("Grunwaldzka");
         clientAddress.setHouseNo(55);
@@ -33,11 +37,21 @@ public class Main {
         clientAddress2.setCity("Sopot");
         clientAddress2.setCountry("Polska");
 
+        ClientAddress clientAddress3 = new ClientAddress();
+        clientAddress3.setStreet("3 maja");
+        clientAddress3.setHouseNo(33);
+        clientAddress3.setCity("Sopot");
+        clientAddress3.setCountry("Polska");
+
         client.setClientAddress(clientAddress);
         client2.setClientAddress(clientAddress2);
+        client3.setClientAddress(clientAddress3);
 
         clientService.addClientWithAddress(client);
         clientService.addClientWithAddress(client2);
+        clientService.addClientWithAddress(client3);
+
+        clientService.listClientsFromCity("Sopot");
 
     }
 

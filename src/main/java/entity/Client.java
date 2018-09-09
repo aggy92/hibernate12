@@ -49,4 +49,14 @@ public class Client {
     public void setClientAddress(ClientAddress clientAddress) {
         this.clientAddress = clientAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", clientAddress=" + clientAddress +
+                '}';
+    }
 }

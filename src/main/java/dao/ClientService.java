@@ -3,6 +3,8 @@ package dao;
 import entity.Client;
 import entity.ClientAddress;
 
+import java.util.List;
+
 public class ClientService {
 
     private ClientDAO clientDAO = new ClientDAO();
@@ -15,6 +17,11 @@ public class ClientService {
 
     public void addClientAddress(ClientAddress clientAddress) {
         clientAddressDAO.create(clientAddress);
+    }
+
+    public void listClientsFromCity(String city) {
+        List<Client> clients = clientDAO.findByCity(city);
+        clients.forEach(System.out::println);
     }
 
     public void addClientWithAddress(Client client) {
