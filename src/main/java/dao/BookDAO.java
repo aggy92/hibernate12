@@ -97,4 +97,16 @@ public class BookDAO {
 
         return books;
     }
+
+    public List<Object[]> findAuthorsWithManyBooks() {
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        List<Object[]> objects = new ArrayList<>();
+        try (Session session = sessionFactory.openSession()) {
+            String query = "select b.author, count(b.title) from Book b " +
+                    "group by b.author " +
+                    "having count(b.title) > 1";
+            objects = session.createQuery(query).getResultList();
+        }
+        return objects;
+    }
 }

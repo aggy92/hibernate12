@@ -41,4 +41,11 @@ public class BookService {
          });
 
      }
+
+     public void listAllAuthorsWithManyBooks() {
+        List<Object[]> objects = bookDAO.findAuthorsWithManyBooks();
+        objects.forEach(ob -> {
+            System.out.println(ob[0] + " -> " + ob[1]);
+         });
+     }
 }

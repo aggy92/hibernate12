@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68432020-1213-405c-98e2-6621b11b739e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,23 +63,24 @@
       <file leaf-file-name="BookDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/BookDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+            <state relative-caret-position="346">
+              <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#create#0;class#BookDAO#0" />
                 <element signature="method#update#0;class#BookDAO#0" />
                 <element signature="method#remove#0;class#BookDAO#0" />
+                <element signature="method#findAllPublishedAfter#0;class#BookDAO#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BookService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/BookService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="342">
+              <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#168#169#0" expanded="true" />
@@ -92,16 +89,26 @@
                 <element signature="e#272#273#0" expanded="true" />
                 <element signature="e#328#329#0" expanded="true" />
                 <element signature="e#351#352#0" expanded="true" />
+                <element signature="method#findAndDeleteBooksAfter#0;class#BookService#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/org/omg/CORBA/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="617">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -354,7 +361,7 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23988006" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09745128" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Designer" />
@@ -448,23 +455,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/org/omg/CORBA/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/BookDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+        <state relative-caret-position="346">
+          <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#create#0;class#BookDAO#0" />
             <element signature="method#update#0;class#BookDAO#0" />
             <element signature="method#remove#0;class#BookDAO#0" />
+            <element signature="method#findAllPublishedAfter#0;class#BookDAO#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/BookService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="342">
+          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#168#169#0" expanded="true" />
@@ -473,16 +498,7 @@
             <element signature="e#272#273#0" expanded="true" />
             <element signature="e#328#329#0" expanded="true" />
             <element signature="e#351#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#findAndDeleteBooksAfter#0;class#BookService#0" />
           </folding>
         </state>
       </provider>
